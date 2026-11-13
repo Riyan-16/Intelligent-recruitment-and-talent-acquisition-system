@@ -159,35 +159,6 @@ The interface uses a three-colour palette in an approximate 60-30-10 ratio:
 
 ---
 
-## Screenshots
-
-Add your screenshots here, for example:
-
-```
-
-
-![Dashboard](screenshots/dashboard.png)
-
-
-
-
-![Candidates](screenshots/candidates.png)
-
-
-
-
-![Matching](screenshots/matching.png)
-
-
-
-
-![Pipeline](screenshots/pipeline.png)
-
-
-```
-
----
-
 ## Limitations
 
 - Data is stored in memory and is lost when the server is stopped.

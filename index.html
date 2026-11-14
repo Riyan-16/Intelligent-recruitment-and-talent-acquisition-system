@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HireTrack</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside>
+  <h1>Hire<span>Track</span></h1>
+  <nav>
+    <button data-tab="dash" class="on">Dashboard</button>
+    <button data-tab="cands">Candidates</button>
+    <button data-tab="jobs">Jobs</button>
+    <button data-tab="match">Matching</button>
+    <button data-tab="pipe">Pipeline</button>
+    <button data-tab="ints">Interviews</button>
+  </nav>
+  <p class="foot">OOTJ mini project</p>
+</aside>
+
+<main>
+  <section id="dash" class="tab show">
+    <h2>Overview</h2>
+    <div class="stats" id="stats"></div>
+    <div class="card"><h3>Candidates by stage</h3><div id="stageBars"></div></div>
+  </section>
+
+  <section id="cands" class="tab">
+    <h2>Candidates</h2>
+    <form id="candForm" class="card row">
+      <input id="cName" placeholder="Full name" required>
+      <input id="cMail" type="email" placeholder="Email" required>
+      <input id="cSkills" placeholder="Skills (comma separated)" required>
+      <select id="cType">
+        <option value="fresher">Fresher</option>
+        <option value="exp">Experienced</option>
+      </select>
+      <input id="cExtra" placeholder="Degree">
+      <button class="go">Add</button>
+    </form>
+    <div id="candList" class="list"></div>
+  </section>
+
+  <section id="jobs" class="tab">
+    <h2>Job openings</h2>
+    <form id="jobForm" class="card row">
+      <input id="jTitle" placeholder="Job title" required>
+      <input id="jSkills" placeholder="Required skills" required>
+      <input id="jExp" type="number" min="0" placeholder="Min years exp" required>
+      <button class="go">Post job</button>
+    </form>
+    <div id="jobList" class="list"></div>
+  </section>
+
+  <section id="match" class="tab">
+    <h2>Smart matching</h2>
+    <div class="card row">
+      <select id="matchJob"></select>
+    </div>
+    <div id="matchList" class="list"></div>
+  </section>
+
+  <section id="pipe" class="tab">
+    <h2>Hiring pipeline</h2>
+    <div id="board" class="board"></div>
+  </section>
+
+  <section id="ints" class="tab">
+    <h2>Interviews</h2>
+    <form id="intForm" class="card row">
+      <select id="iCand"></select>
+      <input id="iDate" type="datetime-local" required>
+      <select id="iMode"><option>Online</option><option>On-site</option><option>Phone</option></select>
+      <button class="go">Schedule</button>
+    </form>
+    <div id="intList" class="list"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+      </html>
